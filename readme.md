@@ -22,7 +22,6 @@ Organize files and components in a folder structure like this. This makes it eas
 
 - Group pages and dialog boxes of the **same module** in a sub-folder of **Pages** folder, with this module name (pluralized). For example: `Pages\Assets\`.
 - Suffix pages with **Page.razor** and dialog boxes with **Dialog.razor**. Name the page name in the singular. For example: `\Pages\Assets\AssetMainPage.razor` and `\Pages\Assets\AssetEditDialog.razor`.
-- Put the **parameters** of a dialog box in a class `[Name]DialogParameters`.
 And save it into the file `[Name]Dialog.razor.Parameters.cs`, to use the "**Nested files**" representation in Visual Studio. See the example `AssetCloneDialog.razor.Parameters.cs` below.
 - The code behind a dialog box (for example, to save data) must be in this class. For example, in the **OnCloseAsync** method (or equivalent method) of this class. Don’t write logic dialog box features in the main call window (except to refresh the main screen).
 - Common and project shared components (between multiple modules) are stored in a folder **Components**, and are suffixed by `Component`.
@@ -42,7 +41,6 @@ For example:
 |   |   |-- CalendarEditDialog.razor
 |   |   |-- CalendarEditDialog.razor.cs
 |   |   |-- CalendarEditDialog.razor
-|   |   |-- CalendarEditDialog.razor.Parameters.cs
 ```
 
 VSCode and Visual Studio have a File nesting feature to regroup visually each item of same page or dialog. In VSCode, set this settings: `"explorer.fileNesting.patterns": { "$(capture).razor, $(capture).razor.*"`.
